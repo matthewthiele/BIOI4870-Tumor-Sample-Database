@@ -54,6 +54,7 @@ downloaded from http://ncg.kcl.ac.uk/download.php, as
 supporting evidence:" under "Annotation and supporting evidence." 
 
 1. Requirements
+ 
 HuTTS was built using Python 3.9.7, PHP, HTML, and MariaDB.
 HuTTS was built using these libraries, although more current 
 versions should still function:
@@ -67,6 +68,7 @@ pandas (1.3.4)
 unidecode
 
 2. Setup 
+
 To set up HuTTS on your machine after downloading the repository 
 to the desired directory, ensure that you have downloaded the NCG 
 .tsv file linked above, and placed it in the same directory. 
