@@ -1,0 +1,34 @@
+Field ID,Data Type,Field Size,Required?,Description
+biosample_id,Varchar,15,Yes,"The sample's unique Biosample id, as classified by NCBI"
+sra_id,Varchar,15,Yes,"The sample's unique SRA id, as classified by NCBI"
+biomaterial_provider,Text,N/A,No,The person/institution listed as biomaterial provider; Who physically obtained the sample
+sample_type,Varchar,30,No,"Type of sample, such as cell culture, tissue sample, single cell, etc."
+isolate,Varchar,30,No,Description of individual from whom sample from obtained
+tissue,Varchar,30,No,Type of tissue sample was taken from
+cell_type,Varchar,30,No,Type of cell sample was taken from/is made up of
+disease_stage,Varchar,30,No,Stage of disease at time sample obtained
+cancer_type,Varchar,60,No,"The specific type of cancer, as classified by the NCG database"
+phenotype,Varchar,30,No,Subject phenotype
+ethnicity,Varchar,30,No,Subject ethinicity
+population,Varchar,30,No,Applicable human population information for subject
+age,Integer,N/A,No,Age of subject when sample obtained
+sex,Varchar,30,No,Physical sex of sampled subject
+Table: sra,,,,
+Field ID,Data Type,Field Size,Required?,Description
+sra_id,Varchar,15,Yes,"The sample's unique SRA id, as classified by NCBI"
+link,Varchar,60,Yes,"A link to the sample's entry on NCBI's SRA database, where one can access sample reads"
+study,Text,N/A,No,The title of the study from which the sample originates from
+instrument,Varchar,30,No,The sequencing instrument used to generate reads
+strategy,Varchar,30,No,The sequencing strategy used to generate the sample reads
+source,Varchar,10,No,"The biological source of the reads, such as DNA or RNA"
+selection,Varchar,10,No,How sequences were selected from the sample
+layout,Varchar,10,No,"Read layout, e.g. single or paired-end"
+Table: cancer_categories,,,,
+Field ID,Data Type,Field Size,Required?,Description
+organ_system,Varchar,30,Yes,Organ system that tumor/cancer type is classified under
+primary_site,Varchar,30,Yes,"The site that the cancer originated from, such as an organ where the tumor first developed"
+cancer_type,Varchar,60,Yes,"The specific type of cancer, as classified by the NCG database"
+Table: cancer_genes,,,,
+Field ID,Data Type,Field Size,Required?,Description
+cancer_type,Varchar,60,Yes,"The specific type of cancer, as classified by the NCG database"
+symbol,Varchar,12,Yes,"The gene symbol, as classified by NCBI, of a canonical cancer driver gene associated with the cancer type"
